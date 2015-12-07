@@ -1,0 +1,15 @@
+extends layout
+
+block content
+     h1 | {{title}}
+     form( 
+        id="uploadForm" 
+        enctype="multipart/form-data" 
+        action="/upload" 
+        method="post"
+        class="col-xs-12 col-sm-offset-4 col-sm-4")
+        
+        label | File :
+        input(type="file" name="product")
+        br
+        input(type="submit" value="Upload Image" name="submit")
